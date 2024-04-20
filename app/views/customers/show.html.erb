@@ -1,0 +1,9 @@
+<h1> customer details </h1>
+  
+
+Customer_Name: <%= @customer.full_name %><br>
+Email: <%= @customer.email %></br>
+Phone_Number: <%= @customer.contact_number %></br><br>
+	
+
+<%= link_to 'back_to_customer_page', customers_path(@customer) %>

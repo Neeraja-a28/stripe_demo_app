@@ -1,0 +1,28 @@
+<%= form_with model: @customer do |form| %>
+  <div>
+    <%= form.label :Full_Name %><br>
+    <%= form.text_field :full_name %>
+  </div>
+
+  <br>
+  <div>
+    <%= form.label :Email %><br>
+    <%= form.text_field :email %>
+  </div>
+
+  <br>
+  <div>
+    <%= form.label :Contact_Number %><br>
+    <%= form.text_field :contact_number %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+  <br>
+  <% end %>
+
+  <%= link_to 'Back to Customer', customers_path(@customer) %>

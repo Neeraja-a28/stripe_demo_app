@@ -1,0 +1,31 @@
+<style>
+  
+  table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+
+<table>
+	<thead>
+		<tr>
+			<th>Full_Name</th>
+			<th>Email</th>
+			<th>Contact_Number</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @customers.each do |customer| %>
+		<tr>
+			<td><%= customer.full_name%></td>
+			<td><%= customer.email %></td>
+			<td><%= customer.contact_number %></td>
+			<td><%= link_to 'Show', customer_path(customer) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<br>
+<%= link_to 'Create New customer', new_customer_path(@customer) %>
